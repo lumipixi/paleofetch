@@ -1,4 +1,4 @@
-#include "logos/arch.h"
+#include "logos/manjaro.h"
 #define COLOR "\e[1;36m"
 
 #define CONFIG \
@@ -7,10 +7,8 @@
     { "",             get_title,               false }, \
     { "",             get_bar,                 false }, \
     { "OS: ",         get_os,                  true  }, \
-    { "Host: ",       get_host,                true  }, \
     { "Kernel: ",     get_kernel,              true  }, \
     { "Uptime: ",     get_uptime,              false }, \
-    { "Battery: ",    get_battery_percentage,  false }, \
     SPACER \
     { "Packages: ",   get_packages_pacman,   false }, \
     { "Shell: ",      get_shell,             false }, \
@@ -24,7 +22,9 @@
     { "",             get_colors1,             false }, \
     { "",             get_colors2,             false }, \
 }
-
+/* Might use later. Maybe.
+    { "Host: ",       get_host,                true  }, \
+*/
 #define CPU_CONFIG \
 { \
    REMOVE("(R)"), \
