@@ -305,6 +305,19 @@ static char *get_shell() {
     return shell;
 }
 
+static char *get_environment() {
+    char *environment = malloc(BUF_SIZE);
+    char *environment_path = getenv("XDG_CURRENT_DESKTOP");
+    char *environment_name = strrchr(getenv("XDG_CURRENT_DESKTOP"), '/');
+
+    if(environment_name == NULL) /* if $XDG_CURRENT_DESKTOP doesn't have a '/' */
+        strncpy(environment, environment_path, BUF_SIZE); /* copy the whole thing over */
+    else
+        strncpy(environment, environment_name + 1, BUF_SIZE); /* o/w copy past the last '/' */
+
+    return environment;
+}
+
 static char *get_resolution() {
     int screen, width, height;
     char *resolution = malloc(BUF_SIZE);
