@@ -1,9 +1,8 @@
 paleofetch
 ==========
 
-A rewrite of [neofetch](https://github.com/dylanaraps/neofetch) in C.
-Currently only supports Linux and Xorg.
-
+A rewrite of [neofetch](https://github.com/dylanaraps/neofetch) in C. Currently only supports Linux and Xorg.
+This build aims to implement feature parity with neofetch after the original repository was archived.
 
 Why use paleofetch over neofetch?
 -----------------------------------------
@@ -72,7 +71,7 @@ which function paleofetch will call display. Current available getter functions 
 * `get_packages`: Shows how many packages you have installed. Currently only works for pacman.
 * `get_shell`: Shows which shell you are using
 * `get_resolution`: Prints your screen resolution
-* `get_environment`: Prints the name of your current graphical environment (your window manager or desktop environment).
+* `get_environment`: Prints the name of your current graphical environment (your window manager or desktop environment). **New**.
 * `get_terminal`: Prints the name of your current terminal
 * `get_cpu`: Prints the name of your CPU, number of cores, and maximum frequency
 * `get_gpu1`, `get_gpu2`: Print the GPU on your system. If you don't have both integrated graphics and an external GPU, `get_gpu2` will likely be blank
