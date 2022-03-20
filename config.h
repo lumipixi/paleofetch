@@ -8,12 +8,14 @@
     { "",             get_bar,                 false }, \
     { "OS: ",         get_os,                  true  }, \
     { "Kernel: ",     get_kernel,              true  }, \
+ /* { "Host: ",       get_host,                true  },*/ \
     { "Uptime: ",     get_uptime,              false }, \
+ /* { "Battery: ",    get_battery_percentage,  false }, */\
     SPACER \
     { "Packages: ",   get_packages_pacman,   false }, \
     { "Shell: ",      get_shell,             false }, \
     { "Terminal: ",   get_terminal,          false }, \
-    { "Environment: ", get_environment,   false }, \
+    { "Environment: ", get_environment,      false }, \
     { "Resolution: ", get_resolution,        false }, \
     SPACER \
     { "CPU: ",        get_cpu,                 true  }, \
@@ -23,9 +25,7 @@
     { "",             get_colors1,             false }, \
     { "",             get_colors2,             false }, \
 }
-/* Might use later. Maybe.
-    { "Host: ",       get_host,                true  }, \
-*/
+
 #define CPU_CONFIG \
 { \
    REMOVE("(R)"), \
